@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/forgot-by-phone}" method="post" th:object="${forgotByPhoneRequest}">
+    <label>Phone Number</label>
+    <input type="text" th:field="*{phoneNumber}" required />
+    <button type="submit">Send OTP</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>🔐 Share File with OTP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #f9f6f0;
+            color: #3b2e1e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2 {
+            color: #b08d57; /* goldish heading */
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 1px 1px 1px #a57c34;
+        }
+        .card {
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background: white;
+            color: #3b2e1e;
+            text-align: center;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #a57c34;
+        }
+        .btn-success {
+            background-color: #a57c34;
+            border-color: #8b6d2f;
+            font-weight: 600;
+        }
+        .btn-success:hover {
+            background-color: #b08d57;
+            border-color: #a57c34;
+        }
+        .btn-primary {
+            background-color: #a57c34;
+            border-color: #8b6d2f;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #b08d57;
+            border-color: #a57c34;
+        }
+        .text-muted {
+            color: #8b7d52 !important;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🔒 Share Your File Securely</h2>
+    <p>Enter the recipient's email to send the OTP for file access.</p>
+
+    <form th:action="@{/share}" method="post">
+        <input type="hidden" name="fileName" th:value="${fileName}" />
+        <input type="hidden" name="fileId" th:value="${fileId}" />
+
+        <div class="mb-3">
+            <label for="recipientEmail" class="form-label">Recipient Email:</label>
+            <input type="email" class="form-control" id="recipientEmail" name="recipientEmail" placeholder="example@example.com" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">✉ Send OTP via Email</button>
+    </form>
+    <p class="text-muted">📁 File to Share: <span th:text="${fileName}"></span></p>
+
+    <a href="/upload" class="btn btn-primary">⬅ Back to Uploads</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

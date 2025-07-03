@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SecureVault | Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #f9f6f0;
+            color: #3b2e1e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .vault-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(176, 141, 87, 0.5);
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #b08d57;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 1px #a57c34;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #3b2e1e;
+        }
+
+        .btn-primary {
+            background-color: #a57c34;
+            border-color: #8b6d2f;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            margin: 0.5rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #b08d57;
+            border-color: #a57c34;
+            box-shadow: 0 7px 15px rgba(176, 141, 87, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background-color: #d9534f;
+            border-color: #c9302c;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            margin: 0.5rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-danger:hover, .btn-danger:focus {
+            background-color: #c9302c;
+            box-shadow: 0 7px 15px rgba(201, 48, 44, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="vault-card shadow-sm">
+    <h1>🔐 Welcome to SecureVault</h1>
+    <p class="lead">Upload, view, and manage your private files securely.</p>
+
+    <a href="/upload" class="btn btn-primary btn-lg">📤 Upload Files</a>
+    <a href="/logout" class="btn btn-danger btn-lg">🔒 Logout</a>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
