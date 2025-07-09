@@ -38,6 +38,8 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+		
+
 
 
 		<dependency>
@@ -104,15 +106,23 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<skipTests>true</skipTests>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<plugins>
+		<!-- Spring Boot Plugin to build runnable JAR -->
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+
+		<!-- (Optional) Disable tests while building -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.1.2</version>
+			<configuration>
+				<skipTests>true</skipTests>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+
 </project>
