@@ -105,24 +105,32 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-	<plugins>
-		<!-- Spring Boot Plugin to build runnable JAR -->
-		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-		</plugin>
+<build>
+    <plugins>
+        <!-- ✅ This plugin creates a runnable JAR -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>3.2.5</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
 
-		<!-- (Optional) Disable tests while building -->
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>3.1.2</version>
-			<configuration>
-				<skipTests>true</skipTests>
-			</configuration>
-		</plugin>
-	</plugins>
+        <!-- Optional: Skip tests -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+                <skipTests>true</skipTests>
+            </configuration>
+        </plugin>
+    </plugins>
 </build>
 
 </project>
