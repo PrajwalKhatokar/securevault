@@ -1,4 +1,4 @@
-# SecureVault – Secure File Storage Application
+# SecureVault – Secure File Storage and File Transfer
 
 SecureVault is a backend-focused Spring Boot application built to securely store and manage user files with strong authentication, authorization, and encryption mechanisms.
 
