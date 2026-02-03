@@ -25,15 +25,15 @@ Core backend features completed. Deployment planned as next enhancement.
 *Captured from local development environment.*
 
 ### Login & Authentication
-![Login](screenshots/login.png)
 <img width="1920" height="1080" alt="Screenshot (334)" src="https://github.com/user-attachments/assets/5f872364-d05d-4922-b6e3-729b6df62c7a" />
 
 
 ### File Upload & Management
-![Upload](screenshots/upload.png)
+<img width="1920" height="1080" alt="Screenshot (340)" src="https://github.com/user-attachments/assets/d57979f9-4d6e-4d73-aa2f-3c79a8bdad68" />
+
 
 ### Secure File Sharing with OTP
-![Share OTP](screenshots/share-otp.png)
+![Share OTP](screenshots/share-otp.png)Screenshot (345)
 
 ### OTP Email Verification
 ![OTP Email](screenshots/otp-email.png)
