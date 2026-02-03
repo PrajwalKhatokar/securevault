@@ -33,10 +33,8 @@ Core backend features completed. Deployment planned as next enhancement.
 
 
 ### Secure File Sharing with OTP
-![Share OTP](screenshots/share-otp.png)Screenshot (345)
-
-### OTP Email Verification
-![OTP Email](screenshots/otp-email.png)
+<img width="1920" height="1080" alt="Screenshot (345)" src="https://github.com/user-attachments/assets/7e2ae550-7c0c-49d3-bb36-ff6104946a21" />
 
 ### Trusted User Access (After 1-Year Inactivity)
-![Trusted Files](screenshots/trusted-files.png)
+<img width="1920" height="1080" alt="Screenshot (339)" src="https://github.com/user-attachments/assets/6cd124f7-063e-4212-92a2-328571f0aa68" />
+
